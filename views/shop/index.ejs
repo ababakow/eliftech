@@ -1,0 +1,41 @@
+<% layout('/layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/shop.css">
+<div class="row mt-sm-5">
+    <div class="col-xl-2 col-lg-1"></div>
+    <div class="col-sm-4 col-lg-3 col-xl-2">
+        <div class="card text-center card-shop  d-inline d-sm-flex ">
+            <h5 class="card-title my-4">Shops</h5>
+            <% for (let shop of shops){ %>
+                <% if(goods.length){ %> 
+                    <% if (shop._id.equals(goods[0].shop)){ %>
+                        <a href="/shop?shop=<%=shop._id%>" class="btn btn-outline-secondary button-shop mb-3 mx-2 active"><%=shop.name%></a>
+                    <% } else { %>  
+                        <a href="/shop?shop=<%=shop._id%>" class="btn btn-outline-secondary button-shop mb-3 mx-2 "><%=shop.name%></a>
+                    <% } %> 
+                <% } else { %>
+                    <a href="/shop?shop=<%=shop._id%>" class="btn btn-outline-secondary button-shop mb-3 mx-2 "><%=shop.name%></a>
+                <% } %> 
+            <% } %> 
+        </div>
+    </div>
+    <div class="col-sm-8 col-lg-7 col-xl-6">
+        <div class="card text-center card-goods flex-row flex-wrap pb-3">
+            <% if (goods.length){ %> 
+                <% for (let item of goods){ %>
+                    <div class="col-12 col-md-6 d-flex justify-content-center p-1">
+                        <div class="card mt-3" style="width: 18rem;">
+                            <img src="<%=item.image%>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><%=item.title%></h5>
+                                <p>price: <%=item.price%></p>
+                                <button id="<%=item._id%>" class="btn btn-outline-secondary add-to-cart">add to Cart</button>
+                            </div>
+                        </div> 
+                    </div>   
+                <% } %>
+            <% } %> 
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-1"></div>
+</div>
+<script src="/javascripts/shop.js"></script> 

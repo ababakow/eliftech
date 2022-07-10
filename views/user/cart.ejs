@@ -1,0 +1,48 @@
+<% layout('/layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/cart.css">
+<link rel="stylesheet" href="/stylesheets/map.css">
+
+<form action="/user/cart" method="POST" class="row mt-sm-5">
+    <div class="col-lg-1"></div>
+    <div class="col-sm-6 col-lg-5 ">
+        <div class="card card-contacts py-5 px-5 px-sm-2 px-lg-5 mb-2 mb-sm-0">
+            <div id="map" class="mb-2"></div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+            <div class="mb-3">
+                <label for="adress" class="form-label">Adress</label>
+                <input type="text" class="form-control" id="adress" name="adress">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-5 ">
+        <div class="card card-cart p-2">
+            
+        </div>
+    </div>
+    <div class=" col-lg-1"></div>
+    <div class="d-flex justify-content-end col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mt-4">
+        <p class="my-2 me-5 total-price">Total price:</p>
+        <button type="submit" class="btn btn-outline-secondary px-5">Submit</button>
+    </div>
+    
+</form>
+
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=<%=mapKey%>&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+
+<script src="/javascripts/cart.js"></script>
+<script src="/javascripts/map.js"></script>
