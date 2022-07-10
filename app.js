@@ -13,7 +13,7 @@ const AppError = require('./utils/appError');
 
 const path = require('path');
 ////////////////////////////////////////////////////
-const dbUrl = 'mongodb://localhost:27017/delivery';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/delivery';
 mongoose
 	.connect(dbUrl)
 	.then(() => {

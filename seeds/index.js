@@ -1,9 +1,13 @@
+if (process.env.NODE_ENV !== 'production') {
+	require('dotenv').config();
+}
+
 const mongoose = require('mongoose');
 
 const seedShops = require('./shops');
 const seedGoods = require('./goods');
 
-const dbUrl = 'mongodb://localhost:27017/delivery';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/delivery';
 mongoose
 	.connect(dbUrl)
 	.then(() => {
