@@ -1,9 +1,9 @@
 # Babakov test app
 
 
-### Before starting app you should prepare the environment:
+## Before starting app you should prepare the environment:
 
-##### DB connection
+### DB connection
 App uses MongoDB.
 You have 2 ways:
 
@@ -20,21 +20,21 @@ Follow the link and create DB cluster.
 DB_URL=<your-atlas-url>
 ```
 
-##### Google API Key
+### Google API Key
 You have to add your Google API Key in .env file for google maps to work:
 ```
 GOOGLE_API_KEY=<your-google-api-key>
 ```
 ***If you have not added .env file in the project yet, you have to create .env file in the project's root directory***
 
-##### Seed test data
+### Seed test data
 If you want to add test data in database, you should run the following command from project's root directory:
 ```
 node seesd/index.js
 ```
 
 
-### Run App
+## Run App
 **!To run the application, Node.js and npm must be installed on your machine.**
 1. Use command line and go to project root directory.
 2. Run:
@@ -42,7 +42,7 @@ node seesd/index.js
 npm install
 ```
 
-###### Seed test data
+### Seed test data
 If you want to add test data in database, you should run the following command from project's root directory:
 ```
 node seesd/index.js
