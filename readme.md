@@ -15,7 +15,7 @@ If you want to install MongoDB on your machine use instruction [here](https://ww
 2. **Use Cloud**
 For example you can use [Atlas](https://www.mongodb.com/atlas). 
 Follow the link and create DB cluster.
-***You shold add .env file in the project's root directory and add your DB URL in thi file:***
+***You should add .env file in the project's root directory and add your DB URL in thi file:***
 ```
 DB_URL=<your-atlas-url>
 ```
